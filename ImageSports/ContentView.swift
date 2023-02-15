@@ -6,67 +6,112 @@
 //
 
 import SwiftUI
-
 struct ContentView: View {
     
-    @State var sourceType: UIImagePickerController.SourceType = .photoLibrary
+    enum SheetToShow: Int, Identifiable {
+            case photoLibrary
+            case camera
+
+            var id: Int { self.rawValue }
+        }
     @State private var selectedImage: UIImage?
-    @State private var isImagePickerDisplay = false
+    @State private var sheetToShow: SheetToShow? = nil
+
+    @ObservedObject var classifler : ImageClassifler
     var body: some View {
-        
             VStack{
                 HStack{
                     Button {
-                        self.sourceType = .camera
-                        
-                        self.isImagePickerDisplay.toggle()
+                    #if targetEnvironment(simulator)
+                        sheetToShow = .photoLibrary;
 
-                       
-                        
-                    }label: {
-                    Image(systemName: "camera.fill")
+                    #else
+                        sheetToShow = .camera;
+                    #endif
+
+                    }
+                label: {
+                    Image(systemName: "camera")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 24,height: 24)
+                        .foregroundColor(.accentColor)
+
                     
                 }
                     Spacer(minLength: 0)
                     Text("Scary hours")
-                        .font(.caption)
+                        .font(.callout)
                     Spacer(minLength: 0)
 
                     Button {
-                        self.sourceType = .photoLibrary
-                        self.isImagePickerDisplay.toggle()
-                        
+                        sheetToShow = .photoLibrary
                     } label: {
                         Image(systemName: "photo.on.rectangle")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 24,height: 24)
-                        
+                            .foregroundColor(.accentColor)
                     }
-                    
                 }
                 .padding()
-                
+                Spacer(minLength: 0)
                 if selectedImage != nil {
                     Image(uiImage: selectedImage!)
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 350, height: 450)
+                        .scaledToFill()
+                        .frame(width: 200, height: 400)
+                        .padding(10)
                     
                 } else{
                     Image("Ghost")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .frame(width: 350, height: 450)
+                        .scaledToFit()
+                        .frame(width: 250, height: 450)
+                        .padding()
                 }
+                
+                Button {
+                    if selectedImage != nil{
+                        classifler.detect(uiImage: selectedImage!)
+                    }
+                    
+                } label: {
+                    Image(systemName: "bolt.fill")
+                        
+                }
+                Group{
+                    if let imageClass = classifler.imageClass{
+                        HStack{
+                            Text("Image is")
+                                .font(.caption)
+                            Text(imageClass)
+                                .bold()
+                        }
+                    }
+                    else{
+                        HStack{
+                            
+                        }
+                    }
+                }
+                .font(.subheadline)
+                .padding()
+
                 Spacer(minLength: 0)
+                
+                
             }
-            .sheet(isPresented: $isImagePickerDisplay) {
-            ImagePickerView(selectedImage: $selectedImage, sourceType: self.sourceType)
+            .sheet(item: $sheetToShow) { item in
+                switch item {
+                case .photoLibrary:
+                    ImagePickerView(selectedImage: $selectedImage, sourceType: .photoLibrary)
+
+                case .camera:
+                    ImagePickerView(selectedImage: $selectedImage, sourceType: .camera)
+                }
         }
     }
 }
-

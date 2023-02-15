@@ -7,17 +7,20 @@
 
 import UIKit
 
-class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
-    var picker: ImagePickerView
-    
-    init(picker: ImagePickerView) {
-        self.picker = picker
+final class Coordinator: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+    var parent: ImagePickerView
+
+    init(_ parent: ImagePickerView) {
+        self.parent = parent
     }
-    
+
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        guard let selectedImage = info[.originalImage] as? UIImage else { return }
-        self.picker.selectedImage = selectedImage
-        self.picker.isPresented.wrappedValue.dismiss()
+
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            parent.selectedImage = image
+        }
+
+        parent.isPresented.wrappedValue.dismiss()
     }
-    
 }

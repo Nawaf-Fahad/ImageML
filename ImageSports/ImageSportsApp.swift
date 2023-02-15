@@ -11,7 +11,7 @@ import SwiftUI
 struct ImageSportsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(classifler: ImageClassifler())
         }
     }
 }

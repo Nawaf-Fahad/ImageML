@@ -5,14 +5,13 @@
 //  Created by Nawaf Alotaibi on 14/02/2023.
 //
 
-import UIKit
 import SwiftUI
 
 struct ImagePickerView: UIViewControllerRepresentable {
     
     @Binding var selectedImage: UIImage?
     @Environment(\.presentationMode) var isPresented
-    var sourceType: UIImagePickerController.SourceType
+    var sourceType: UIImagePickerController.SourceType = .photoLibrary
         
     func makeUIViewController(context: Context) -> UIImagePickerController {
         let imagePicker = UIImagePickerController()
@@ -27,6 +26,6 @@ struct ImagePickerView: UIViewControllerRepresentable {
 
     // Connecting the Coordinator class with this struct
     func makeCoordinator() -> Coordinator {
-        return Coordinator(picker: self)
+        return Coordinator(self)
     }
 }
