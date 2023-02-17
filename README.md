@@ -7,12 +7,12 @@ https://developer.apple.com/machine-learning/models/
 
 
 ### ScreenShots
-<img src="ImageML/FirstScreen.PNG" alt="drawing" width="200"/>
+<img src="ImageSports/ScreenShots/FirstScreen.png" alt="drawing" width="200"/>
 
-<img src="ImageML/golf.PNG" alt="drawing" width="200"/>
+<img src="ImageSports/ScreenShots/pot.png" alt="drawing" width="200"/>
 
 
-<img src="ImageML/pot.PNG" alt="drawing" width="200"/>
+<img src="ImageSports/ScreenShots/golf.png" alt="drawing" width="200"/>
 
 
 
