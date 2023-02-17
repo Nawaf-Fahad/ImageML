@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E7570E8B299B643600F3FE06 /* IMG+EXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7570E8A299B643600F3FE06 /* IMG+EXT.swift */; };
-		E761326B299C0CC70029430D /* MLImage.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E761326A299C0CC70029430D /* MLImage.mlmodel */; };
 		E7735065299A5AFE00E6F066 /* ImageSportsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7735064299A5AFE00E6F066 /* ImageSportsApp.swift */; };
 		E7735067299A5AFE00E6F066 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7735066299A5AFE00E6F066 /* ContentView.swift */; };
 		E7735069299A5B0500E6F066 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7735068299A5B0500E6F066 /* Assets.xcassets */; };
@@ -16,12 +15,14 @@
 		E79AF726299CFF210007250C /* MobileNetV2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E79AF725299CFF200007250C /* MobileNetV2.mlmodel */; };
 		E79AF728299D0BEE0007250C /* Classifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79AF727299D0BEE0007250C /* Classifier.swift */; };
 		E79AF72A299D10EE0007250C /* ImageClassifler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79AF729299D10EE0007250C /* ImageClassifler.swift */; };
+		E7B9E83F299F781100D8FAE5 /* pot.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B9E83E299F781100D8FAE5 /* pot.png */; };
+		E7B9E841299F781800D8FAE5 /* golf.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B9E840299F781800D8FAE5 /* golf.png */; };
+		E7B9E843299F781E00D8FAE5 /* FirstScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = E7B9E842299F781E00D8FAE5 /* FirstScreen.png */; };
 		E7E3107B299B986700F3FAEC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E3107A299B986700F3FAEC /* Coordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E7570E8A299B643600F3FE06 /* IMG+EXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "IMG+EXT.swift"; sourceTree = "<group>"; };
-		E761326A299C0CC70029430D /* MLImage.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MLImage.mlmodel; sourceTree = "<group>"; };
 		E7735061299A5AFE00E6F066 /* ImageSports.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageSports.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7735064299A5AFE00E6F066 /* ImageSportsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSportsApp.swift; sourceTree = "<group>"; };
 		E7735066299A5AFE00E6F066 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +32,9 @@
 		E79AF725299CFF200007250C /* MobileNetV2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNetV2.mlmodel; sourceTree = "<group>"; };
 		E79AF727299D0BEE0007250C /* Classifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Classifier.swift; sourceTree = "<group>"; };
 		E79AF729299D10EE0007250C /* ImageClassifler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageClassifler.swift; sourceTree = "<group>"; };
+		E7B9E83E299F781100D8FAE5 /* pot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pot.png; sourceTree = "<group>"; };
+		E7B9E840299F781800D8FAE5 /* golf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = golf.png; sourceTree = "<group>"; };
+		E7B9E842299F781E00D8FAE5 /* FirstScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FirstScreen.png; sourceTree = "<group>"; };
 		E7E3107A299B986700F3FAEC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,13 +69,13 @@
 		E7735063299A5AFE00E6F066 /* ImageSports */ = {
 			isa = PBXGroup;
 			children = (
+				E7B9E83D299F780300D8FAE5 /* ScreenShots */,
 				E7735064299A5AFE00E6F066 /* ImageSportsApp.swift */,
 				E7570E8A299B643600F3FE06 /* IMG+EXT.swift */,
 				E7E3107A299B986700F3FAEC /* Coordinator.swift */,
 				E7735066299A5AFE00E6F066 /* ContentView.swift */,
 				E79AF727299D0BEE0007250C /* Classifier.swift */,
 				E79AF729299D10EE0007250C /* ImageClassifler.swift */,
-				E761326A299C0CC70029430D /* MLImage.mlmodel */,
 				E7735068299A5B0500E6F066 /* Assets.xcassets */,
 				E773506A299A5B0500E6F066 /* ImageSports.entitlements */,
 				E773506B299A5B0500E6F066 /* Preview Content */,
@@ -85,6 +89,16 @@
 				E773506C299A5B0500E6F066 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E7B9E83D299F780300D8FAE5 /* ScreenShots */ = {
+			isa = PBXGroup;
+			children = (
+				E7B9E83E299F781100D8FAE5 /* pot.png */,
+				E7B9E840299F781800D8FAE5 /* golf.png */,
+				E7B9E842299F781E00D8FAE5 /* FirstScreen.png */,
+			);
+			path = ScreenShots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,8 +159,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7B9E83F299F781100D8FAE5 /* pot.png in Resources */,
+				E7B9E843299F781E00D8FAE5 /* FirstScreen.png in Resources */,
 				E773506D299A5B0500E6F066 /* Preview Assets.xcassets in Resources */,
 				E7735069299A5B0500E6F066 /* Assets.xcassets in Resources */,
+				E7B9E841299F781800D8FAE5 /* golf.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +180,6 @@
 				E79AF72A299D10EE0007250C /* ImageClassifler.swift in Sources */,
 				E7E3107B299B986700F3FAEC /* Coordinator.swift in Sources */,
 				E7735067299A5AFE00E6F066 /* ContentView.swift in Sources */,
-				E761326B299C0CC70029430D /* MLImage.mlmodel in Sources */,
 				E7735065299A5AFE00E6F066 /* ImageSportsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,12 +303,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ImageSports/ImageSports.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageSports/Preview Content\"";
 				DEVELOPMENT_TEAM = XUNA66GYSC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Huh;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -301,10 +319,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -313,10 +332,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Nawaf.ImageSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -327,12 +348,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ImageSports/ImageSports.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"ImageSports/Preview Content\"";
 				DEVELOPMENT_TEAM = XUNA66GYSC;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Huh;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -341,10 +364,11 @@
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -353,10 +377,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Nawaf.ImageSports;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
